@@ -1,0 +1,4 @@
+node_modules/
+.npm/
+singbox_data/
+*.log

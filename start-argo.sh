@@ -414,7 +414,7 @@ schedule_restart() {
 
 # ================== 定时删除敏感文件 ==================
 {
-  sleep 20
+  sleep 10
   rm -f "$ARGO_LOG" 2>/dev/null || true
   echo "[清理] 已删除 bot.log"
 } &

@@ -226,7 +226,7 @@ start_argo() {
 
   : > "$ARGO_LOG"
   if [ "$ARGO_TOKEN" != "" ]; then
-    "${FILE_MAP[argo]}" tunnel --edge-ip-version auto --protocol http2 --no-autoupdate run --token "$ARGO_TOKEN" > "$ARGO_LOG" 2>&1 &
+    "${FILE_MAP[argo]}" tunnel --edge-ip-version auto --protocol http2 --ha-connections 4 --no-autoupdate run --token "$ARGO_TOKEN" > "$ARGO_LOG" 2>&1 &
     ARGO_PID=$!
     ARGO_HOST="$ARGO_DOMAIN"
     echo "[ARGO] 固定隧道启动完成 PID=$ARGO_PID"

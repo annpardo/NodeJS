@@ -16,7 +16,7 @@ Xray 不提供 TUIC，因此 Xray 版本不会生成 TUIC 节点。
 
 ## Cloudflare 模式
 
-`CF_MODE` 有三种取值，大小写不敏感：
+`CF_MODE` 有三种模式
 
 ```text
 argo   使用 Cloudflare Tunnel
@@ -27,7 +27,7 @@ cdn    使用 Cloudflare 橙云代理
 ### Argo 模式
 
 ```bash
-CF_MODE=argo node index-xray-cdn.js
+CF_MODE=argo node index-xray.js
 ```
 
 固定隧道需要设置：
@@ -36,7 +36,7 @@ CF_MODE=argo node index-xray-cdn.js
 CF_MODE=argo \
 ARGO_DOMAIN=tunnel.example.com \
 ARGO_TOKEN=你的Token \
-node index-xray-cdn.js
+node index-xray.js
 ```
 
 如果 `ARGO_DOMAIN` 和 `ARGO_TOKEN` 都为空，脚本会启动临时 `trycloudflare.com` 隧道。

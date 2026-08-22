@@ -8,8 +8,8 @@
 
 | 文件 | 核心程序 | 支持协议 |
 | --- | --- | --- |
-| `index-xray-cdn.js` | Xray | VLESS Reality、Hysteria2、VLESS WebSocket |
-| `index-singbox-cdn.js` | sing-box | VLESS Reality、Hysteria2、TUIC、VLESS WebSocket |
+| `index-xray.js` | Xray | VLESS Reality、Hysteria2、VLESS WebSocket |
+| `index-singbox.js` | sing-box | VLESS Reality、Hysteria2、TUIC、VLESS WebSocket |
 
 Xray 不提供 TUIC，因此 Xray 版本不会生成 TUIC 节点。
 
@@ -93,7 +93,7 @@ sing-box 版本额外支持：
 
 ## 注意事项
 
-- `index-xray-cdn.js` 不支持 TUIC，TUIC 只在 sing-box 版本中提供。
+- `index-xray.js` 不支持 TUIC，TUIC 只在 sing-box 版本中提供。
 - CDN 模式需要自己的域名、Cloudflare 橙云 DNS 和正确的 SSL/TLS 配置。
 - 临时 Argo 域名可能在隧道进程结束后失效。
 - 不要让两个脚本同时使用同一个工作目录，否则可能互相覆盖 `.npm` 内的配置、密钥和缓存记录。

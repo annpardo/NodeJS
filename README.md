@@ -13,23 +13,6 @@
 
 Xray 不提供 TUIC，因此 Xray 版本不会生成 TUIC 节点。
 
-## 环境要求
-
-- Linux ARM64 或 AMD64
-- Node.js
-- Bash
-- `curl` 或 `wget`
-- `openssl`（可选；没有时使用内置证书）
-- 能够访问程序下载地址和 Cloudflare API
-
-脚本会根据系统架构下载对应程序：
-
-```text
-ARM64: https://arm64.ssss.nyc.mn
-AMD64: https://amd64.ssss.nyc.mn
-```
-
-下载的程序使用随机文件名保存，路径记录在 `.npm/bin.path` 中，后续重启会复用已下载的程序。
 
 ## Cloudflare 模式
 
@@ -105,23 +88,12 @@ sing-box 版本额外支持：
 
 1. 将所需脚本上传到面板服务器的 `/home/container` 目录。
 2. 在面板中设置主文件：
-   - Xray：`index-xray-cdn.js`
-   - sing-box：`index-singbox-cdn.js`
 3. 在面板的环境变量中填写端口、Cloudflare 和 Telegram 参数。
 4. 启动服务器，脚本会自动下载或复用核心程序并生成节点。
-
-如果面板的启动命令错误地把 `.js` 文件交给 `ts-node`，可以上传一个 `index.ts` 启动器：
-
-```ts
-require("./index-xray-cdn.js");
-```
-
-然后将主文件设置为 `index.ts`，并确保 `package.json` 中包含 `ts-node` 和 `typescript`。
 
 ## 注意事项
 
 - `index-xray-cdn.js` 不支持 TUIC，TUIC 只在 sing-box 版本中提供。
 - CDN 模式需要自己的域名、Cloudflare 橙云 DNS 和正确的 SSL/TLS 配置。
 - 临时 Argo 域名可能在隧道进程结束后失效。
-- 下载地址提供的程序属于外部构建，使用前应自行核对来源和文件哈希。
 - 不要让两个脚本同时使用同一个工作目录，否则可能互相覆盖 `.npm` 内的配置、密钥和缓存记录。

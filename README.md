@@ -66,7 +66,7 @@ Cloudflare 后台的 SSL/TLS 模式、源站端口和脚本变量必须保持一
 | 变量 | 默认值 | 说明 |
 | --- | --- | --- |
 | `HY2_PORT` | 空 | Hysteria2 入站端口，留空关闭 |
-| `REALITY_PORT` | `` | VLESS Reality 入站端口，留空关闭 |
+| `REALITY_PORT` | 空 | VLESS Reality 入站端口，留空关闭 |
 | `REALITY_SNI` | `www.nazhumi.com` | Reality 握手 SNI 和目标域名 |
 | `ARGO_PORT` | `8080` | Argo 模式下的本地 WebSocket 端口 |
 | `ARGO_DOMAIN` | 空 | 固定 Argo 隧道域名 |

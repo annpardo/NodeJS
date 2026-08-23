@@ -1,6 +1,6 @@
 # Xray / sing-box 节点运行脚本
 
-这是一组单文件 Node.js 脚本，用于在 Linux 服务器上自动运行 Xray 或 sing-box，并生成 VLESS Reality、Hysteria2、TUIC（仅 sing-box）和 Cloudflare WebSocket 节点。
+这是一组单文件 Node.js 脚本，用于在 翼龙面板上自动运行 Xray 或 sing-box，并生成 VLESS Reality、Hysteria2、TUIC（仅 sing-box）和 Cloudflare WebSocket 节点。
 
 脚本会自动完成程序下载、配置生成、Reality 密钥保存、TLS 证书生成、Cloudflare 接入、节点链接生成和 Telegram 推送。
 
@@ -87,7 +87,7 @@ sing-box 版本额外支持：
 ## 面板使用
 
 1. 将所需脚本上传到面板服务器的 `/home/container` 目录。
-2. 在面板中设置主文件：
+2. 再上传文件之后修改文件名和面板启动文件保持一致
 3. 在面板的环境变量中填写端口、Cloudflare 和 Telegram 参数。
 4. 启动服务器，脚本会自动下载或复用核心程序并生成节点。
 

@@ -71,7 +71,7 @@ Cloudflare 后台的 SSL/TLS 模式、源站端口和脚本变量必须保持一
 | `ARGO_PORT` | `8080` | Argo 模式下的本地 WebSocket 端口 |
 | `ARGO_DOMAIN` | 空 | 固定 Argo 隧道域名 |
 | `ARGO_TOKEN` | 空 | 固定 Argo 隧道 Token |
-| `CF_MODE` | 空 | `argo`、`cdn` 或留空 | argo为隧道模式，cdn为origin rule回源模式，留空则不套用cf cdn
+| `CF_MODE` | 空 | `argo`、`cdn` 或留空 argo为隧道模式，cdn为origin rule回源模式，留空则不套用cf cdn |
 | `CF_DOMAIN` | 空 | CDN 模式使用的域名 |
 | `CF_ORIGIN_PORT` | `443` | CDN 模式源站监听端口 |
 | `CF_PUBLIC_PORT` | `443` | CDN 节点链接使用的端口 |

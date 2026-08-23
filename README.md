@@ -78,6 +78,7 @@ Cloudflare 后台的 SSL/TLS 模式、源站端口和脚本变量必须保持一
 | `CHAT_ID` | 空 | Telegram Chat ID | TG机器人ID
 | `BOT_TOKEN` | 空 | Telegram Bot Token | TG机器人token，发送生成节点到telegram上
 | `RESTART_TIME` | 空 | xray/singbox 程序重启时间，留空不启用重启功能
+
 sing-box 版本额外支持：
 
 | 变量 | 默认值 | 说明 |

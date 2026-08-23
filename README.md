@@ -39,7 +39,7 @@ ARGO_TOKEN=你的Token \
 node index-xray.js
 ```
 
-如果 `ARGO_DOMAIN` 和 `ARGO_TOKEN` 都为空，脚本会启动临时 `trycloudflare.com` 隧道。
+如果ARGO_DOMAIN和ARGO_TOKEN都为空，脚本会启动临时 `trycloudflare.com` 隧道。
 
 Argo 模式下，Xray 或 sing-box 的 WebSocket 入站只监听本机，Cloudflared 负责转发流量。
 

@@ -73,8 +73,7 @@ Cloudflare 后台的 SSL/TLS 模式、源站端口和脚本变量必须保持一
 | `ARGO_TOKEN` | 空 | 固定 Argo 隧道 Token |
 | `CF_MODE` | 空 | `argo`、`cdn` 或留空 argo为隧道模式，cdn为origin rule回源模式，留空则不套用cf cdn |
 | `CF_DOMAIN` | 空 | CDN 模式使用的域名 |
-| `CF_ORIGIN_PORT` | `443` | CDN 模式源站监听端口 |
-| `CF_PUBLIC_PORT` | `443` | CDN 节点链接使用的端口 |
+| `CF_ORIGIN_PORT` | `空` | CDN 模式源站监听端口，填写服务器或面板分配的端口 |
 | `CHAT_ID` | 空 | Telegram Chat ID | TG机器人ID
 | `BOT_TOKEN` | 空 | Telegram Bot Token | TG机器人token，发送生成节点到telegram上
 | `RESTART_TIME` | 空 | xray/singbox 程序重启时间，留空不启用重启功能

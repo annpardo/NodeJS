@@ -8,8 +8,8 @@
 
 | 文件 | 核心程序 | 支持协议 |
 | --- | --- | --- |
-| `index-xray.js` | Xray | VLESS Reality、Hysteria2、VLESS WebSocket |
-| `index-singbox.js` | sing-box | VLESS Reality、Hysteria2、TUIC、VLESS WebSocket |
+| `index-xray-cdn.js` | Xray | VLESS Reality、Hysteria2、VLESS WebSocket |
+| `index-singbox-cdn.js` | sing-box | VLESS Reality、Hysteria2、TUIC、VLESS WebSocket |
 
 Xray 不提供 TUIC，因此 Xray 版本不会生成 TUIC 节点。
 
